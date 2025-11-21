@@ -1,0 +1,5 @@
+Sensor Reading → Data Processing → BLE Transmission
+     ↓               ↓                  ↓
+   [I2C/ADC] → [Filtering/Calibration] → [GATT Notification]
+     ↓               ↓                  ↓
+  Raw Data    Processed Values    Mobile Device
