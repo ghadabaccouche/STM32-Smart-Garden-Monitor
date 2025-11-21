@@ -1,0 +1,32 @@
+## ⚡ Setup & Installation
+
+### Prerequisites
+- STM32CubeIDE v1.10.0 or later
+- STM32CubeMX for configuration
+- ST-Link Utility or stlink tools
+- Python 3.8+ (for test scripts)
+
+### Building the Project
+
+1. **Generate Code with STM32CubeMX:**
+   ```bash
+   # Open the .ioc file in STM32CubeMX
+   # Generate code for your preferred toolchain
+Build with STM32CubeIDE:
+
+bash
+# Import existing project into STM32CubeIDE
+# Build using Project -> Build All (Ctrl+B)
+Flash to Device:
+
+bash
+# Using ST-Link command line tools
+st-flash write build/smart_garden_monitor.bin 0x08000000
+
+Configuration
+# Edit Core/Inc/app_config.h to modify system parameters:
+
+c
+#define SAMPLE_INTERVAL_MS   300000    // 5 minutes
+#define MOISTURE_THRESHOLD   45        // Alert below 45%
+#define ENABLE_LOW_POWER_MODE 1        // Enable power saving
