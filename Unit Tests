@@ -1,0 +1,15 @@
+# bash
+
+# Run all unit tests
+ceedling test:all
+
+# Generate test coverage report
+ceedling gcov:all
+Hardware-in-the-Loop (HIL) Testing
+Connect logic analyzer to verify I2C/SPI communication
+
+Use power analyzer to measure current consumption in different modes
+
+Validate BLE packet structure with nRF Connect app
+
+Test Coverage: >85% (See Testing/Test_Results/ for detailed reports)
