@@ -118,3 +118,13 @@ STM32-Smart-Garden-Monitor/
 ├── LICENSE
 └── README.md
 
+🔮 Future Enhancements
+LoRaWAN integration for long-range communication
+
+Solar power harvesting capability
+
+Machine learning for predictive watering
+
+OTA (Over-the-Air) firmware updates
+
+MQTT integration for cloud data logging
