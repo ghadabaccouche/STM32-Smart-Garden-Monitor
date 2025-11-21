@@ -50,3 +50,71 @@ This project implements an automated plant monitoring system that collects senso
 *See `Hardware/` directory for schematics and connection details.*
 
 ## 🏗️ Software Architecture
+
+Application Layer (app_)
+├── app_garden_monitor.c - Main application state machine
+├── app_ble_controller.c - BLE communication management
+└── app_power_manager.c - Power mode management
+
+Hardware Abstraction Layer (hal_)
+├── hal_sensors.c - Unified sensor interface
+├── hal_rtc.c - Real-time clock operations
+└── hal_ble.c - BLE hardware abstraction
+
+Drivers (drv_)
+├── drv_shtc3.c - Temperature/humidity driver
+├── drv_veml7700.c - Light sensor driver
+└── drv_soil_moisture.c - Soil moisture ADC driver
+
+Utilities (util_)
+├── util_fifo.c - Circular buffer implementation
+├── util_logger.c - Structured logging
+└── util_crc.c - CRC checksum calculations
+
+## 📁 Repository Structure
+
+STM32-Smart-Garden-Monitor/
+│
+├── Documentation/
+│ ├── Software_Design_Document.md
+│ ├── Testing_Strategy.md
+│ └── Power_Consumption_Analysis.md
+│
+├── Firmware/
+│ ├── Core/
+│ │ ├── Inc/ - Header files
+│ │ ├── Src/ - Source files
+│ │ └── Startup/ - Startup scripts
+│ │
+│ ├── Drivers/
+│ │ ├── STM32L4xx_HAL_Driver/
+│ │ └── BSP/ - Board Support Package
+│ │
+│ ├── Middleware/
+│ │ └── BLE/ - BLE stack & profiles
+│ │
+│ └── Projects/
+│ └── NUCLEO-L476RG/
+│ ├── EWARM/ - IAR project files
+│ ├── MDK-ARM/ - Keil project files
+│ └── STM32CubeIDE/ - STM32CubeIDE project
+│
+├── Hardware/
+│ ├── Schematics/ - PCB schematics (KiCad)
+│ ├── Datasheets/ - Component datasheets
+│ └── Bill_of_Materials.csv - BOM
+│
+├── Testing/
+│ ├── UnitTests/ - Ceedling test framework
+│ ├── IntegrationTests/ - System integration tests
+│ └── Test_Results/ - Test reports & coverage
+│
+├── Tools/
+│ ├── Scripts/ - Python data analysis scripts
+│ └── Config/ - Configuration utilities
+│
+├── Images/ - System diagrams & photos
+├── .github/workflows/ - CI/CD for automated testing
+├── LICENSE
+└── README.md
+
