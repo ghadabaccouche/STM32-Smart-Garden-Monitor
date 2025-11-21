@@ -1,0 +1,10 @@
+# Usage
+
+Power the system with 3.3V supply or USB
+The device will enter initialization mode (LED blinking)
+After calibration, it enters normal operating mode
+Use a BLE scanner app to connect and read data
+Sensor data is broadcast via the custom service UUID: 12345678-1234-5678-9ABC-DEF123456789
+
+# Mobile App Integration:
+A sample Android application is available in the Mobile_App/ directory.
